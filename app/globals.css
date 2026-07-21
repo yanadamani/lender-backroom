@@ -72,7 +72,7 @@ a {
 }
 
 .category-block {
-  margin-bottom: 4px;
+  margin-bottom: 28px;
 }
 
 .category-label {
@@ -80,30 +80,25 @@ a {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #ffffff;
-  margin: 14px 0 10px;
-}
-
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 16px;
-  align-items: start;
+  margin: 0 0 12px;
 }
 
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .card-tile {
   background: var(--bg-elevated);
   border: 1px solid var(--card-outline);
   border-radius: 10px;
-  padding: 14px;
+  padding: 22px;
   cursor: pointer;
   transition: border-color 0.15s, transform 0.1s;
   display: block;
+  flex: 0 0 280px;
+  min-height: 128px;
 }
 
 .card-tile:hover {
@@ -112,15 +107,15 @@ a {
 }
 
 .card-tile-title {
-  font-size: 13.5px;
+  font-size: 16px;
   font-weight: 600;
-  margin: 0 0 5px;
+  margin: 0 0 8px;
 }
 
 .card-tile-desc {
-  font-size: 11.5px;
+  font-size: 13px;
   color: var(--text-dim);
-  line-height: 1.4;
+  line-height: 1.5;
   margin: 0;
 }
 
