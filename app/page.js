@@ -16,24 +16,21 @@ export default function DataroomHome() {
         </Link>
       </div>
 
-      <div className="note-banner">
-        Scaffold mode — access control is not wired up yet. Every card below shows mock data; every
-        visitor currently sees every card.
-      </div>
-
-      {Object.entries(grouped).map(([category, cards]) => (
-        <div key={category}>
-          <div className="category-label">{category}</div>
-          <div className="card-grid">
-            {cards.map((card) => (
-              <Link key={card.id} href={`/card/${card.id}`} className="card-tile">
-                <p className="card-tile-title">{card.title}</p>
-                <p className="card-tile-desc">{card.description}</p>
-              </Link>
-            ))}
+      <div className="category-grid">
+        {Object.entries(grouped).map(([category, cards]) => (
+          <div key={category} className="category-block">
+            <div className="category-label">{category}</div>
+            <div className="card-grid">
+              {cards.map((card) => (
+                <Link key={card.id} href={`/card/${card.id}`} className="card-tile">
+                  <p className="card-tile-title">{card.title}</p>
+                  <p className="card-tile-desc">{card.description}</p>
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
