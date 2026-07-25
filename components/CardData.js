@@ -70,6 +70,7 @@ export default function CardData({ type, data }) {
     );
   }
 
-  return <div className="empty-hint">Unknown card type: {type}</div>;
+return <div className="empty-hint">Unknown card type: {type}</div>;
+}
 
 
