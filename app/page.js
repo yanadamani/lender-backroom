@@ -21,7 +21,11 @@ export default function DataroomHome() {
           <div className="category-label">{category}</div>
           <div className="card-grid">
             {cards.map((card) => (
-              <Link key={card.id} href={`/card/${card.id}`} className="card-tile">
+              <Link
+                key={card.id}
+                href={card.id === "portfolio-cuts" ? "/engine" : `/card/${card.id}`}
+                className="card-tile"
+              >
                 <p className="card-tile-title">{card.title}</p>
                 <p className="card-tile-desc">{card.description}</p>
               </Link>
