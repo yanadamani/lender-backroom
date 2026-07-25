@@ -51,7 +51,18 @@ export default function CardData({ type, data }) {
         {data.items.map((item) => (
           <div key={item.label} className="list-row">
             <span>{item.label}</span>
-            <span className="list-value">{item.value}</span>
+            {item.url ? (
+              <a
+                className="list-value"
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {item.value} ↗
+              </a>
+            ) : (
+              <span className="list-value">{item.value}</span>
+            )}
           </div>
         ))}
         <div className="as-of">As of {data.asOf}</div>
@@ -60,4 +71,5 @@ export default function CardData({ type, data }) {
   }
 
   return <div className="empty-hint">Unknown card type: {type}</div>;
-}
+
+
